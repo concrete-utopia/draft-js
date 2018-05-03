@@ -8983,7 +8983,7 @@ var DraftEditor = function (_React$Component2) {
       outline: 'none',
       // fix parent-draggable Safari bug. #1326
       userSelect: readOnly ? 'none' : 'text',
-      WebkitUserSelect: 'text',
+      WebkitUserSelect: readOnly ? 'none' : 'text',
       whiteSpace: 'pre-wrap',
       wordWrap: 'break-word'
     };
