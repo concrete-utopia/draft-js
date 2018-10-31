@@ -8972,8 +8972,6 @@ var DraftEditor = function (_React$Component2) {
         textDirectionality = _props.textDirectionality;
 
 
-    console.log("white", this.props.whiteSpaceStyle);
-
     var rootClass = cx({
       'DraftEditor/root': true,
       'DraftEditor/alignLeft': textAlignment === 'left',

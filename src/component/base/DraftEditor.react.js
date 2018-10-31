@@ -317,8 +317,6 @@ class DraftEditor extends React.Component<DraftEditorProps, State> {
       textDirectionality,
     } = this.props;
 
-    console.log("white", this.props.whiteSpaceStyle)
-
     const rootClass = cx({
       'DraftEditor/root': true,
       'DraftEditor/alignLeft': textAlignment === 'left',
