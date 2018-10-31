@@ -8972,6 +8972,8 @@ var DraftEditor = function (_React$Component2) {
         textDirectionality = _props.textDirectionality;
 
 
+    console.log("white", this.props.whiteSpaceStyle);
+
     var rootClass = cx({
       'DraftEditor/root': true,
       'DraftEditor/alignLeft': textAlignment === 'left',
@@ -8984,7 +8986,7 @@ var DraftEditor = function (_React$Component2) {
       // fix parent-draggable Safari bug. #1326
       userSelect: readOnly ? 'none' : 'text',
       WebkitUserSelect: readOnly ? 'none' : 'text',
-      whiteSpace: 'pre-wrap',
+      whiteSpace: this.props.whiteSpaceStyle != null ? this.props.whiteSpaceStyle : 'pre-wrap',
       wordWrap: 'break-word'
     };
 
@@ -15273,7 +15275,7 @@ var DraftEditorPlaceholder = function (_React$Component) {
     });
 
     var contentStyle = {
-      whiteSpace: 'pre-wrap'
+      whiteSpace: this.props.whiteSpaceStyle != null ? this.props.whiteSpaceStyle : 'pre-wrap'
     };
 
     return React.createElement(

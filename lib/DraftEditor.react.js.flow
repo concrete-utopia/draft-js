@@ -302,6 +302,8 @@ class DraftEditor extends React.Component<DraftEditorProps, State> {
       textDirectionality
     } = this.props;
 
+    console.log("white", this.props.whiteSpaceStyle);
+
     const rootClass = cx({
       'DraftEditor/root': true,
       'DraftEditor/alignLeft': textAlignment === 'left',
@@ -314,7 +316,7 @@ class DraftEditor extends React.Component<DraftEditorProps, State> {
       // fix parent-draggable Safari bug. #1326
       userSelect: readOnly ? 'none' : 'text',
       WebkitUserSelect: readOnly ? 'none' : 'text',
-      whiteSpace: 'pre-wrap',
+      whiteSpace: this.props.whiteSpaceStyle != null ? this.props.whiteSpaceStyle : 'pre-wrap',
       wordWrap: 'break-word'
     };
 

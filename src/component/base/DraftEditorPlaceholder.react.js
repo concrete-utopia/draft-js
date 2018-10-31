@@ -51,7 +51,7 @@ class DraftEditorPlaceholder extends React.Component<Props> {
     });
 
     const contentStyle = {
-      whiteSpace: 'pre-wrap',
+      whiteSpace: this.props.whiteSpaceStyle != null ? this.props.whiteSpaceStyle : 'pre-wrap',
     };
 
     return (
