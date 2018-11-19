@@ -12640,6 +12640,11 @@ var onInput = __webpack_require__(121);
 var onKeyDown = __webpack_require__(122);
 var onPaste = __webpack_require__(136);
 var onSelect = __webpack_require__(141);
+var onKeyPressed = function onKeyPressed(editor, event) {
+  if (event.key === 'Enter') {
+    event.nativeEvent.preventDefault();
+  }
+};
 
 var DraftEditorEditHandler = {
   onBeforeInput: onBeforeInput,
@@ -12652,6 +12657,7 @@ var DraftEditorEditHandler = {
   onFocus: onFocus,
   onInput: onInput,
   onKeyDown: onKeyDown,
+  onKeyPressed: onKeyPressed,
   onPaste: onPaste,
   onSelect: onSelect
 };
