@@ -25,6 +25,11 @@ const onInput = require('editOnInput');
 const onKeyDown = require('editOnKeyDown');
 const onPaste = require('editOnPaste');
 const onSelect = require('editOnSelect');
+const onKeyPressed = (editor, event) => {
+  if (event.key === 'Enter') {
+    event.nativeEvent.preventDefault();
+  }
+}
 
 const DraftEditorEditHandler = {
   onBeforeInput,
@@ -37,8 +42,10 @@ const DraftEditorEditHandler = {
   onFocus,
   onInput,
   onKeyDown,
+  onKeyPressed,
   onPaste,
   onSelect,
 };
+
 
 module.exports = DraftEditorEditHandler;
