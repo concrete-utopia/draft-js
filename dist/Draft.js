@@ -13297,7 +13297,6 @@ function editOnBlur(editor, e) {
 
   var selection = currentSelection.set('hasFocus', false);
   editor.props.onBlur && editor.props.onBlur(e);
-  editor.update(EditorState.acceptSelection(editorState, selection));
 }
 
 module.exports = editOnBlur;
